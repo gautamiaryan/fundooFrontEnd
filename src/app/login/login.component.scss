@@ -1,0 +1,14 @@
+.main-div{
+    height: 100vh;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
