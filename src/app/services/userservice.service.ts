@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClientModule, HttpHeaders, HttpClient} from '@angular/common/http';
+import {HttpHeaders, HttpClient} from '@angular/common/http';
 import {environment} from 'src/environments/environment';
 import { Observable } from 'rxjs';
 
@@ -18,6 +18,6 @@ export class UserserviceService {
 
   registration(user: any):Observable<any>{
     console.log(user);
-    return this.http.post<any>(this.API_URL + 'user/registration',user, this.httpOptions);
+    return this.http.post<any>(this.API_URL + 'api/register',user, this.httpOptions);
   }
 }

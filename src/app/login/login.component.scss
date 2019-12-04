@@ -1,8 +1,14 @@
 .main-div{
-    height: 100vh;
-    display:grid;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+   width: 100%;
+  
+}
+.matCard{
+  height: 50vh;
+  width: 28%;
 }
 .example-container {
     display: flex;
@@ -12,3 +18,28 @@
   .example-container > * {
     width: 100%;
   }
+
+.Title{
+  display: flex;
+  justify-content: center;
+font-family: 'Times New Roman', Times, serif;
+font-size: 20px;
+color: rgb(108, 93, 238);
+}
+
+.Title2{
+  display: flex;
+  justify-content: center;
+font-family: 'Times New Roman', Times, serif;
+font-size: 20px;
+color: rgba(16, 14, 122, 0.795);
+}
+.button{
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+.forgot{
+  display: flex;
+  justify-content:center;
+}
