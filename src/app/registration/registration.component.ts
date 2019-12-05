@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserserviceService } from '../services/userservice.service';
 import { MatSnackBar} from '@angular/material/snack-bar';
-import { NgForm, FormGroup,FormControl,FormBuilder} from '@angular/forms';
+import { NgForm, FormGroup,FormControl} from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-registration',
@@ -13,10 +13,8 @@ export class RegistrationComponent implements OnInit {
   registerForm:FormGroup;
   constructor(private userservice:UserserviceService,
     private router:Router,
-    private snackbar:MatSnackBar,
-    private fb:FormBuilder) {
+    private snackbar:MatSnackBar) {
       
-
      }
 
   ngOnInit() {
@@ -40,7 +38,6 @@ export class RegistrationComponent implements OnInit {
        console.log(user);
        this.snackbar.open('registration successfully verify by email', 'Ok', {duration: 3000});
 
-      
    },
    (error: any) => {
        console.log( error);

@@ -20,4 +20,9 @@ export class UserserviceService {
     console.log(user);
     return this.http.post<any>(this.API_URL + 'api/register',user, this.httpOptions);
   }
+
+  login(user: any):Observable<any>{
+    console.log(user);
+    return this.http.post<any>(this.API_URL+ 'api/login',user,this.httpOptions);
+  }
 }
