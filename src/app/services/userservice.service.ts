@@ -25,4 +25,14 @@ export class UserserviceService {
     console.log(user);
     return this.http.post<any>(this.API_URL+ 'api/login',user,this.httpOptions);
   }
+
+  forgetpassword(user:any):Observable<any>{
+    console.log(user);
+    return  this.http.post<any>(this.API_URL+'api/forgetpassword',user,this.httpOptions);
+  }
+
+  resetPassword(user: any) {
+    return this.http.post<any>(this.API_URL + 'api/resetpassword', user);
+  }
+//, { headers: new HttpHeaders().set('token', token)}
 }
