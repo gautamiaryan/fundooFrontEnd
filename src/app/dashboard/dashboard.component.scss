@@ -61,18 +61,19 @@
   width: 190px;;
 
   }
-  .notes{
-      display:flex;
-      justify-content:left;
-  }
-  .remainder{
-    display:flex;
-    justify-content:left;
-    
-  }
-
   .notesdiv{
-      display: flex;
-      
+      padding: 25px;
+      border-bottom: 1px solid;
   }
-  
+.lebelmain{
+    padding: 25px;
+    border-bottom: 1px solid;
+}
+
+.trashmain{
+    padding:25px;
+    border-bottom: 1px solid;
+}
+.note{
+    
+}
