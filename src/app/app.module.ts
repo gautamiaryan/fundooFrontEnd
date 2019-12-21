@@ -21,6 +21,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { NotesComponent } from './notes/notes.component';
 
 
 
@@ -31,7 +32,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     RegistrationComponent,
     ForgetpasswordComponent,
     ResetpasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    NotesComponent
    
   ],
   imports: [

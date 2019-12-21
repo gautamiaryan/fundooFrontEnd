@@ -1,27 +1,57 @@
 <div class="main-div">
-    <mat-card class="matCard">
+    <mat-card class="matCard" style="box-shadow: 1px 1px 7px 0px;">
       
       <form [formGroup]="loginForm">
         <div >
-            <div class="Title2">Welcome To Fundoo</div>
-            <div class="Title">Login</div>
+
+
+
+            <div fxLayout="row" fxLayoutAlign="center center" style="font-size:24px; margin-bottom: 25px;">
+                <span style="color: blue;">F</span>
+                <span style="color: red;">u</span>
+                <span style="color:#fbbc05;">n</span>
+                <span style="color: blue;">d</span>
+                <span style="color : green">o</span>
+                <span style="color: red;">o</span>
+                <span style="color: blue;">N</span>
+                <span style="color: red;">o</span>
+                <span style="color: blue;">t</span>
+                <span style="color : green">e</span>
+                <span style="color: red;">s</span>
+              </div>
+
+
+
+
+            <div class="Title2">Welcome To Fundoo Login</div>
         
         </div>
       
         <div>
-            <mat-form-field appearance="legacy"  style="width: 358px;">
+
+            <mat-form-field appearance="outline" class="Log">
                 <mat-label>Username</mat-label>
-                <input matInput placeholder="username" formControlName="emailId" >
-            </mat-form-field>
+                <input matInput placeholder="username" formControlName="emailId">
+              </mat-form-field>
+
+
+
+
+
         </div>
 
         <div>
-            <mat-form-field appearance="legacy"   style="width: 358px;">
+
+            <mat-form-field appearance="outline" class="Log">
                 <mat-label>Password</mat-label>
-                <input matInput type="password" placeholder="password"
-                formControlName="password"
-                >
-            </mat-form-field>
+                <input matInput type="password"  placeholder="password" formControlName="password">
+              </mat-form-field>
+
+
+
+
+         
+           
         </div>
         <div class="button">
             <div>
