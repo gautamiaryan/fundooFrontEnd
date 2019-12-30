@@ -28,7 +28,6 @@
           </div>
         </div>
 
-
         <div class="appBarLastIcon">
           <div class="refresh">
             <div id="refreshbutton" mat-icon-button>
@@ -40,8 +39,6 @@
               </mat-icon>
             </div>
           </div>
-
-
 
 
           <div mat-icon-button>
@@ -92,16 +89,21 @@
         </div>
 
         <div class="trashmain">
-          <div>
+          <div class="archieve">
               <img src="assets/icon/archive-24px.svg">
               Archive
           </div>
-          <div>
+          <div class="trash">
               <img src="assets/icon/restore_from_trash-24px.svg">
               Trash
           </div>
         </div>
       </div>
     </mat-drawer>
+
+    <mat-drawer-content style="background-color: white;">
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
   </mat-drawer-container>
 </div>
+

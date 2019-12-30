@@ -5,22 +5,32 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ForgetpasswordComponent} from './forgetpassword/forgetpassword.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CreatenoteComponent } from './createnote/createnote.component';
 import { NotesComponent } from './notes/notes.component';
+
 const routes: Routes = [
   {path:"login",component:LoginComponent},
   
   {path:'',component:LoginComponent},
-
-  {path:"dashboard",component:DashboardComponent},
 
   {path:"register",component:RegistrationComponent},
 
   {path:"forgetPassword",component:ForgetpasswordComponent},
 
   {path:"resetPassword/:token",component:ResetpasswordComponent},
-  {
-    path:"notes",component:NotesComponent
-  }
+
+  {path:"dashboard",component:DashboardComponent,
+   children:[
+     
+     { 
+      path:'', redirectTo:'notes', pathMatch:'full' 
+    },
+    { 
+      path: 'notes', 
+      component: NotesComponent 
+    },
+    {path:"createnote",component:CreatenoteComponent}
+   ]}
 
 ];
 @NgModule({

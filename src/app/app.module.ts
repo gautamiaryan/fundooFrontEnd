@@ -21,8 +21,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { DisplayNotesComponent } from './display-notes/display-notes.component';
+import { IconlistComponent } from './iconlist/iconlist.component';
+import { CreatenoteComponent } from './createnote/createnote.component';
 import { NotesComponent } from './notes/notes.component';
-
 
 
 @NgModule({
@@ -33,6 +35,9 @@ import { NotesComponent } from './notes/notes.component';
     ForgetpasswordComponent,
     ResetpasswordComponent,
     DashboardComponent,
+    DisplayNotesComponent,
+    IconlistComponent,
+    CreatenoteComponent,
     NotesComponent
    
   ],

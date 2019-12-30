@@ -31,8 +31,13 @@ export class UserserviceService {
     return  this.http.post<any>(this.API_URL+'users/forgetpassword',user,this.httpOptions);
   }
 
-  resetPassword(user: any) {
+  resetPassword(user: any):Observable<any> {
     return this.http.post<any>(this.API_URL + 'users/resetpassword', user);
   }
 //, { headers: new HttpHeaders().set('token', token)}
 }
+
+
+// ------------------------------------------Notes Services-------------------------------
+
+
