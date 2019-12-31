@@ -25,6 +25,12 @@ import { DisplayNotesComponent } from './display-notes/display-notes.component';
 import { IconlistComponent } from './iconlist/iconlist.component';
 import { CreatenoteComponent } from './createnote/createnote.component';
 import { NotesComponent } from './notes/notes.component';
+import { CreatelabelComponent } from './createlabel/createlabel.component';
+import { DisplaylabelComponent } from './displaylabel/displaylabel.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { EditComponent } from './edit/edit.component';
+import { TrashnoteComponent } from './trashnote/trashnote.component';
 
 
 @NgModule({
@@ -38,7 +44,12 @@ import { NotesComponent } from './notes/notes.component';
     DisplayNotesComponent,
     IconlistComponent,
     CreatenoteComponent,
-    NotesComponent
+    NotesComponent,
+    CreatelabelComponent,
+    DisplaylabelComponent,
+    SidenavComponent,
+    EditComponent,
+    TrashnoteComponent
    
   ],
   imports: [
@@ -58,8 +69,10 @@ import { NotesComponent } from './notes/notes.component';
     MatIconModule,
     MatMenuModule,
     MatSidenavModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule
   ],
+  entryComponents:[EditComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

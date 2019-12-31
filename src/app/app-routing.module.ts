@@ -7,6 +7,7 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreatenoteComponent } from './createnote/createnote.component';
 import { NotesComponent } from './notes/notes.component';
+import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
@@ -28,6 +29,10 @@ const routes: Routes = [
     { 
       path: 'notes', 
       component: NotesComponent 
+    },
+    { 
+      path: 'edit', 
+      component: EditComponent 
     },
     {path:"createnote",component:CreatenoteComponent}
    ]}

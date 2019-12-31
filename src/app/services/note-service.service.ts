@@ -18,13 +18,20 @@ export class NoteServiceService {
 
   addNote(Note:any,token :string):Observable<any>{
 
-    return this.http.post<any>("http://localhost:9090/notes/create",Note,{headers: new HttpHeaders().set('Authorization', 'Bearer ' + token) });
+    return this.http.post<any>(this.API_URL+"/notes/create",Note,{headers: new HttpHeaders().set('token', token) });
 
 
   }
 
   getAllNotes(token:string):Observable<any>{
-     return this.http.get<any>("http://localhost:9090/notes", {headers: new HttpHeaders().set('token',  token) });
+     return this.http.get<any>(this.API_URL+"/notes", {headers: new HttpHeaders().set('token',  token) });
+  }
+
+  updateNote(Note:any,token:string,id:Number):Observable<any>{
+    console.log(id);
+    
+    return this.http.post<any>(this.API_URL+"notes/update/"+id,Note,{headers: new HttpHeaders().set('token',  token) })
+
   }
 
   

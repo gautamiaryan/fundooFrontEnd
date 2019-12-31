@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar class="docs-navbar-header">
   <mat-toolbar-row>
 
     <div class="Main">
@@ -47,7 +47,6 @@
             </mat-icon>
           </div>
 
-
         </div>
       </div>
     </div>
@@ -55,7 +54,14 @@
 
 </mat-toolbar>
 
-<div class="sidenavdiv">
+
+
+
+<!-- <div>
+  <router-outlet></router-outlet>
+</div> -->
+
+ <div class="sidenavdiv">
   <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
       <div class="maindiv">
@@ -63,7 +69,7 @@
 
         <div class="notesdiv">
 
-          <div class="notes">
+          <div class="notes" routerLink="notes">
             <img src="assets/icon/emoji_objects-24px.svg">
             Notes
           </div>
@@ -100,10 +106,9 @@
         </div>
       </div>
     </mat-drawer>
-
-    <mat-drawer-content style="background-color: white;">
+    <div>
       <router-outlet></router-outlet>
-    </mat-drawer-content>
+    </div>
   </mat-drawer-container>
-</div>
+</div> 
 
