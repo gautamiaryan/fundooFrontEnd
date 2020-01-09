@@ -31,7 +31,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { EditComponent } from './edit/edit.component';
 import { TrashnoteComponent } from './trashnote/trashnote.component';
-
+import { DeletenoteComponent } from './deletenote/deletenote.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { TrashnoteComponent } from './trashnote/trashnote.component';
     DisplaylabelComponent,
     SidenavComponent,
     EditComponent,
-    TrashnoteComponent
+    TrashnoteComponent,
+    DeletenoteComponent
    
   ],
   imports: [
@@ -70,7 +72,9 @@ import { TrashnoteComponent } from './trashnote/trashnote.component';
     MatMenuModule,
     MatSidenavModule,
     FlexLayoutModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
+
   ],
   entryComponents:[EditComponent],
   providers: [],

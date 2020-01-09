@@ -34,5 +34,43 @@ export class NoteServiceService {
 
   }
 
+  deleteNote(token:string,id:any):Observable<any>{
+    return this.http.delete<any>(this.API_URL+"notes/delete/"+id,{headers: new HttpHeaders().set('token',  token) })
+  }
+
+  getTrashedNotes(token:string):Observable<any>{
+    return this.http.get<any>(this.API_URL+"trashednotes",{headers: new HttpHeaders().set('token',  token) })
+  }
+
+  getArchivedNotes(token:string):Observable<any>{
+    return this.http.get<any>(this.API_URL+"archievednotes",{headers: new HttpHeaders().set('token',  token) })
+  }
+
+  pinNotes(token:string,id:any):Observable<any>{
+
+    return this.http.post<any>(this.API_URL+"notes/pinned/"+id,{headers: new HttpHeaders().set('token',  token) })
+     
+  }
+  unPinNotes(token:string,id:any):Observable<any>{
+
+    return this.http.post<any>(this.API_URL+"notes/unpinned/"+id,{headers: new HttpHeaders().set('token',  token) })
+  }
+
+  archieveNote(token:string,id:any):Observable<any>{
+    return this.http.post<any>(this.API_URL+"notes/archieve/"+id,{headers: new HttpHeaders().set('token',  token) })
+  }
+
+  unarchieveNote(token:string,id:any):Observable<any>{
+    return this.http.post<any>(this.API_URL+"notes/unarchieve/"+id,{headers: new HttpHeaders().set('token',  token) })
+  }
+
+  trashnote(token:string,id:any):Observable<any>{
+    return this.http.post<any>(this.API_URL+"notes/trashed/"+id,{headers: new HttpHeaders().set('token',  token) })
+  }
+
+  restoreNote(token:string,id:any):Observable<any>{
+    return this.http.post<any>(this.API_URL+"notes/restore/"+id,{headers: new HttpHeaders().set('token',  token) })
+  }
+
   
 }
